@@ -13,7 +13,7 @@ underlying gets more predictable as the morning session unfolds. This repo asks 
 narrow, well-posed question:
 
 > Given only information available by late morning, how much price movement is actually
-> left in the day — and how far away can you safely sell?
+> left in the day, and how far away can you safely sell?
 
 It's not a directional model and it doesn't touch the option chain. It forecasts
 **remaining realized variance** from morning price action and the prior day's India VIX
@@ -75,19 +75,8 @@ matter, which is why strikes are derived from a fitted Student-*t*, not a Gaussi
    sells closer than a fixed minimum distance regardless of what the model says.
 
 Full equations in the note. The point of the repo is the empirical validation, not a
-black-box signal — every number above is walk-forward OOS, nothing is fit-and-reported
+black-box signal, every number above is walk-forward OOS, nothing is fit-and-reported
 in-sample.
-
----
-
-## What's here / what's not
-
-- ✅ Full methodology write-up (`vrp_note.pdf`, `vrp_note.tex`)
-- ✅ Scripts for feature selection, model fitting, and walk-forward validation
-- ❌ No raw NSE data or India VIX series is included or redistributed — pull your own
-  from your data vendor of choice and point the scripts at it
-- ❌ No live execution, position sizing, or order routing — this is strike selection
-  only, not a full trading system
 
 ---
 
@@ -102,6 +91,6 @@ a guarantee of future results. Use at your own risk.
 
 ## About
 
-Built by [Aprameya](https://github.com/your-github-handle) — quantitative research on
-NSE market microstructure and options. Questions, feedback, or spotted an issue in the
+Built by [Aprameya](https://github.com/aprameyap)
+Questions, feedback, or spotted an issue in the
 methodology? Open an issue or reach out.
