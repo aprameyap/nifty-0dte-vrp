@@ -3,8 +3,6 @@
 **Two-feature log-linear model for remaining realized variance on NSE expiry days, used to size short strangle strikes on Nifty and BankNifty.**
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
-[![Markets](https://img.shields.io/badge/markets-NSE%20Nifty%20%7C%20BankNifty-orange)](#)
-[![Status](https://img.shields.io/badge/status-research-lightgrey)](#)
 
 ---
 
