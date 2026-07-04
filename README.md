@@ -84,8 +84,7 @@ in-sample.
 
 This is a research framework, not investment advice or a production trading system.
 It does not model execution costs, slippage, adverse selection, or margin/liquidation
-risk on short options. Past out-of-sample performance on historical expiry days is not
-a guarantee of future results. Use at your own risk.
+risk on short options.
 
 ---
 
