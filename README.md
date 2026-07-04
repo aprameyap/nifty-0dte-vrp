@@ -71,7 +71,7 @@ matter, which is why strikes are derived from a fitted Student-*t*, not a Gaussi
    to get a conditional quantile on remaining variance.
 4. Convert that quantile to a return magnitude, and place the short strangle's put and
    call strikes at that distance from spot.
-5. A hard floor overrides the model on abnormally quiet mornings, so the strategy never
+5. A discretionary hard floor overrides the model on abnormally quiet mornings, so the strategy never
    sells closer than a fixed minimum distance regardless of what the model says.
 
 Full equations in the note. The point of the repo is the empirical validation, not a
