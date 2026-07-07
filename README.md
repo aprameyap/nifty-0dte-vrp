@@ -42,10 +42,8 @@ Adding the prior-day VIX close on top of morning realized variance alone is wort
 **+0.148 R²** on Nifty and **+0.067** on BankNifty — the regime signal is genuinely
 additive, not redundant with intraday price action.
 
-A CatBoost sweep over 12 candidate features (multi-window RV, jump indicators,
-time-of-day, prior expiry RV, etc.) confirmed that only these two features carry real
-out-of-sample signal — everything else was noise. That's what motivates collapsing to a
-closed-form, two-feature log-linear model instead of shipping a black box.
+Post a CatBoost sweep over 12 candidate features (multi-window RV, jump indicators,
+time-of-day, prior expiry RV, etc.), two features were isolated to be fit into the OLS model.
 
 <p align="center">
   <img src="./banknifty_diag.png" width="90%" alt="BankNifty diagnostics: VIX-tercile scatter, OOS walk-forward fit, residual distribution">
