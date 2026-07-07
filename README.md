@@ -9,15 +9,12 @@
 ## What this is
 
 On expiry days, 0DTE options decay fast while the *remaining* realized volatility of the
-underlying gets more predictable as the morning session unfolds. This repo asks one
-narrow, well-posed question:
+underlying gets more predictable as the morning session unfolds. Our objective:
 
 > Given only information available by late morning, how much price movement is actually
 > left in the day, and how far away can you safely sell?
 
-It's not a directional model and it doesn't touch the option chain. It forecasts
-**remaining realized variance** from morning price action and the prior day's India VIX
-close, fits the out-of-sample residuals to a Student-*t* distribution, and uses the
+The model forecasts **remaining realized variance** from morning price action and the prior day's India VIX close and fits the out-of-sample residuals to a Student-*t* distribution, and uses the
 tails of that distribution to place statistically-grounded short strangle strikes.
 
 The variance risk premium (VRP) shows up empirically, not by assumption: the fitted
@@ -39,8 +36,7 @@ BankNifty: 445 expiry days (2016–2025).
 | **2-feature (RV + prior-day VIX)** | **0.394** | **0.498**   |
 
 Adding the prior-day VIX close on top of morning realized variance alone is worth
-**+0.148 R²** on Nifty and **+0.067** on BankNifty — the regime signal is genuinely
-additive, not redundant with intraday price action.
+**+0.148 R²** on Nifty and **+0.067** on BankNifty.
 
 Post a CatBoost sweep over 12 candidate features (multi-window RV, jump indicators,
 time-of-day, prior expiry RV, etc.), two features were isolated to be fit into the OLS model.
