@@ -85,11 +85,3 @@ in-sample.
 This is a research framework, not investment advice or a production trading system.
 It does not model execution costs, slippage, adverse selection, or margin/liquidation
 risk on short options.
-
----
-
-## About
-
-Built by [Aprameya](https://github.com/aprameyap)
-Questions, feedback, or spotted an issue in the
-methodology? Open an issue or reach out.
